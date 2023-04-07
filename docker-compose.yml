@@ -1,0 +1,49 @@
+version: "3.9"
+services:
+  discovery:
+    build: ../discovery
+    image: discovery
+    container_name: discovery
+    ports:
+      - "8761:8761"
+  gateway:
+    build: ../gateway
+    image: gateway
+    container_name: gateway
+    ports:
+      - "8081:8081"
+    environment:
+      - "eureka.client.serviceUrl.defaultZone= http://discovery:8761/eureka"
+  auth-ms:
+    build: ../auth-ms
+    image: auth-ms
+    container_name: auth-ms
+    depends_on:
+      - auth_db
+    ports:
+      - "8082:8082"
+    environment:
+      - "eureka.client.serviceUrl.defaultZone= http://discovery:8761/eureka"
+  accommodation-ms:
+    build: ../accommodation-ms
+    image: accommodation-ms
+    container_name: accommodation-ms
+    depends_on:
+      - "mongo_db"
+    ports:
+      - "8083:8083"
+    environment:
+      - "eureka.client.serviceUrl.defaultZone= http://discovery:8761/eureka"
+  mongo_db:
+    image: "mongo:4.4.3"
+    restart: always
+  auth_db:
+    image: mysql:8-debian
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=auth
+    volumes:
+      - ./import-catalog.sql:/docker-entrypoint-initdb.d/import-catalog.sql
+    ports:
+      - "3307:3306"
