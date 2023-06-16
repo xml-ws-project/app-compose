@@ -20,8 +20,6 @@ services:
     ports:
       - "8082:8082"
       - "9092:9092"
-    networks:
-      - auth-network
     restart: on-failure:5
     # command: sh -c "sleep 10 && java -Djarmode=layertools -jar app.jar"
 
@@ -35,8 +33,6 @@ services:
     ports:
       - "8083:8083"
       - "9093:9093"
-    networks:
-      - accommodation-network
     restart: on-failure:5
     # command: sh -c "sleep 10 && java -Djarmode=layertools -jar app.jar"
 
@@ -81,8 +77,6 @@ services:
       - MYSQL_DATABASE=auth
     ports:
       - "3307:3306"
-    networks:
-      - auth-network
     healthcheck:
       # test: ["CMD", "curl", "-f", "http://localhost:3307"]
       test: "/usr/bin/mysql --user=root --password=root --execute 'SHOW DATABASES;'"
@@ -98,8 +92,6 @@ services:
       - MYSQL_DATABASE=accommodation
     ports:
       - "3309:3306"
-    networks:
-      - accommodation-network
     healthcheck:
       # test: ["CMD", "curl", "-f", "http://localhost:3309"]
       test: "/usr/bin/mysql --user=root --password=root --execute 'SHOW DATABASES;'"
@@ -144,9 +136,3 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=root
       - GF_SECURITY_ADMIN_PASSWORD=root
-
-networks:
-  auth-network:
-    driver: bridge
-  accommodation-network:
-    driver: bridge
