@@ -110,6 +110,8 @@ services:
     restart: always
     ports:
       - "7474:7474"
+    environment:
+      - NEO4J_AUTH=neo4j/123.Auth
     healthcheck:
       test: wget http://localhost:7474 || exit 1
       interval: 1s
