@@ -55,6 +55,19 @@ services:
       - "gateway"
       - "zipkin"
 
+  recommendation-ms:
+    build: ../recommendation-ms
+    image: recommendation-ms
+    container_name: recommendation-ms
+    ports:
+      - "8085:8085"
+      - "9095:9095"
+    volumes:
+      - app-logs:/logging
+    depends_on:
+      recommendation_db:
+        condition: service_healthy
+
   zipkin:
     image: openzipkin/zipkin
     container_name: zipkin
@@ -91,6 +104,18 @@ services:
       interval: 10s
       timeout: 30s
       retries: 5
+
+  recommendation_db:
+    image: neo4j:latest
+    restart: always
+    ports:
+      - "7474:7474"
+    healthcheck:
+      test: wget http://localhost:7474 || exit 1
+      interval: 1s
+      timeout: 10s
+      retries: 20
+      start_period: 3s
 
   accommodation_db:
     image: mysql:8-debian
