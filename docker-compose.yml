@@ -9,6 +9,8 @@ services:
     ports:
       - "8081:8081"
       - "9091:9091"
+    volumes:
+      - app-logs:/logging
 
   auth-ms:
     build: ../auth-ms
@@ -20,6 +22,8 @@ services:
     ports:
       - "8082:8082"
       - "9092:9092"
+    volumes:
+      - app-logs:/logging
     restart: on-failure:5
     # command: sh -c "sleep 10 && java -Djarmode=layertools -jar app.jar"
 
@@ -33,6 +37,8 @@ services:
     ports:
       - "8083:8083"
       - "9093:9093"
+    volumes:
+      - app-logs:/logging
     restart: on-failure:5
     # command: sh -c "sleep 10 && java -Djarmode=layertools -jar app.jar"
 
@@ -43,6 +49,8 @@ services:
     ports:
       - "8084:8084"
       - "9094:9094"
+    volumes:
+      - app-logs:/logging
     depends_on:
       - "gateway"
       - "zipkin"
@@ -52,9 +60,9 @@ services:
     container_name: zipkin
     # Environment settings are defined here https://github.com/openzipkin/zipkin/blob/master/zipkin-server/README.md#environment-variables
     # environment:
-    # - STORAGE_TYPE=mysql
-    # Point the zipkin at the storage backend
-    # - MYSQL_HOST=zipkin
+    #   - STORAGE_TYPE=mysql
+    #   # Point the zipkin at the storage backend
+    #   - MYSQL_HOST=zipkin
     # Uncomment to enable scribe
     # - SCRIBE_ENABLED=true
     # Uncomment to enable self-tracing
@@ -66,8 +74,8 @@ services:
       - "9411:9411"
       # Uncomment if you set SCRIBE_ENABLED=true
       # - 9410:9410
-    depends_on:
-      - zipkin_db
+      # depends_on:
+      #   - zipkin_db
 
   auth_db:
     image: mysql:8-debian
@@ -98,16 +106,15 @@ services:
       interval: 10s
       timeout: 30s
       retries: 5
-
-  zipkin_db:
-    image: openzipkin/zipkin-mysql
-    container_name: zipkin-mysql
-    restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=zipkin
-    ports:
-      - "3310:3306"
+    # zipkin_db:
+    #   image: openzipkin/zipkin-mysql
+    #   container_name: zipkin-mysql
+    # restart: always
+    # environment:
+    #   - MYSQL_ROOT_PASSWORD=root
+    #   - MYSQL_DATABASE=zipkin
+    # ports:
+    #   - "3310:3306"
 
   prometheus:
     image: prom/prometheus:v2.37.1
@@ -136,3 +143,26 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=root
       - GF_SECURITY_ADMIN_PASSWORD=root
+
+  promtail:
+    image: grafana/promtail:2.2.1
+    volumes:
+      - ./promtail/promtail-config.yaml:/etc/promtail/promtail-config.yaml
+      - app-logs:/var/log
+    command: -config.file=/etc/promtail/promtail-config.yaml
+
+  loki:
+    image: grafana/loki:2.2.1
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki/loki-config.yaml:/etc/loki/loki-config.yaml
+    command: -config.file=/etc/loki/loki-config.yaml
+
+volumes:
+  app-logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./app-logs
