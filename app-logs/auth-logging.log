@@ -1,0 +1,187 @@
+2023-06-17 00:03:11.601  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 3e2b9d2fa53e with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-17 00:03:11.615  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-17 00:03:14.266  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-17 00:03:14.401  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+2023-06-17 00:03:15.017  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d4457605-2ad9-3506-921e-9a0edce6713f
+2023-06-17 00:03:16.094  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-17 00:03:16.109  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-17 00:03:16.116  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-17 00:03:16.222  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-17 00:03:16.224  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4518 ms
+2023-06-17 00:03:17.531  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-17 00:03:17.610  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-17 00:03:17.817  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-17 00:03:17.954  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 00:03:18.528  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 00:03:18.554  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-17 00:03:19.911  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-17 00:03:19.938  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 00:03:21.281  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-17 00:03:23.219  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-17 00:03:23.465  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-17 00:03:23.757  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpcService.grpcUserDetailsService
+2023-06-17 00:03:23.903  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-17 00:03:23.939  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 12.986 seconds (JVM running for 13.78)
+2023-06-17 00:03:30.352  INFO [auth-ms,f1cf8d686e8e4f89,f1cf8d686e8e4f89] 1 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-17 00:03:30.353  INFO [auth-ms,f1cf8d686e8e4f89,f1cf8d686e8e4f89] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-17 00:03:30.355  INFO [auth-ms,f1cf8d686e8e4f89,f1cf8d686e8e4f89] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-17 00:10:05.685  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-17 00:10:05.701  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-17 00:10:05.736  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 00:10:05.751  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 00:10:05.775  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-17 00:11:46.202  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 76cfb52832de with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-17 00:11:46.206  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-17 00:11:47.751  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-17 00:11:47.808  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+2023-06-17 00:11:48.278  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d4457605-2ad9-3506-921e-9a0edce6713f
+2023-06-17 00:11:49.631  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-17 00:11:49.676  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-17 00:11:49.682  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-17 00:11:49.809  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-17 00:11:49.810  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3528 ms
+2023-06-17 00:11:51.009  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-17 00:11:51.053  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-17 00:11:51.229  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-17 00:11:51.328  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 00:11:51.797  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 00:11:51.815  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-17 00:11:52.920  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-17 00:11:52.926  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 00:11:53.354  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-17 00:11:54.049  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-17 00:11:54.134  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-17 00:11:54.200  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpcService.grpcUserDetailsService
+2023-06-17 00:11:54.258  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-17 00:11:54.275  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 8.612 seconds (JVM running for 9.198)
+2023-06-17 00:12:00.171  INFO [auth-ms,dc12b44a504a2b18,dc12b44a504a2b18] 1 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-17 00:12:00.172  INFO [auth-ms,dc12b44a504a2b18,dc12b44a504a2b18] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-17 00:12:00.174  INFO [auth-ms,dc12b44a504a2b18,dc12b44a504a2b18] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-17 00:13:08.594  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-17 00:13:08.603  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-17 00:13:08.696  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 00:13:08.705  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 00:13:08.730  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-17 18:46:39.896  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 76cfb52832de with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-17 18:46:39.979  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-17 18:46:43.740  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-17 18:46:43.989  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interfaces.
+2023-06-17 18:46:45.501  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d4457605-2ad9-3506-921e-9a0edce6713f
+2023-06-17 18:46:49.622  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-17 18:46:51.181  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-17 18:46:52.051  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-17 18:46:57.423  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-17 18:46:57.425  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 17153 ms
+2023-06-17 18:47:02.965  WARN [auth-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://zipkin:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=java.util.concurrent.TimeoutException: RestTemplateSender{http://zipkin:9411/api/v2/spans} check() timed out after 1000ms}]
+2023-06-17 18:47:04.116  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-17 18:47:04.449  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-17 18:47:05.144  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-17 18:47:05.339  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 18:47:06.120  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 18:47:06.159  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-17 18:47:07.552  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-17 18:47:07.568  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 18:47:08.569  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-17 18:47:12.671  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-17 18:47:12.864  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-17 18:47:13.368  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpcService.grpcUserDetailsService
+2023-06-17 18:47:13.647  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-17 18:47:13.676  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 35.757 seconds (JVM running for 37.568)
+2023-06-17 18:47:19.962  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-17 18:47:19.973  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-17 18:47:19.991  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 18:47:19.994  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 18:47:20.003  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-17 19:05:07.548  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 857c0a5c6ac7 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-17 19:05:07.553  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-17 19:05:08.953  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-17 19:05:08.995  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+2023-06-17 19:05:09.294  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d4457605-2ad9-3506-921e-9a0edce6713f
+2023-06-17 19:05:09.854  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-17 19:05:09.864  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-17 19:05:09.865  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-17 19:05:09.918  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-17 19:05:09.919  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2224 ms
+2023-06-17 19:05:10.703  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-17 19:05:10.753  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-17 19:05:10.865  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-17 19:05:10.948  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 19:05:11.252  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 19:05:11.265  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-17 19:05:12.427  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-17 19:05:12.434  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 19:05:12.741  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-17 19:05:13.526  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-17 19:05:13.573  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-17 19:05:13.662  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpcService.grpcUserDetailsService
+2023-06-17 19:05:13.752  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-17 19:05:13.770  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 6.676 seconds (JVM running for 7.223)
+2023-06-17 19:07:58.990  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-17 19:07:59.018  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-17 19:07:59.058  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 19:07:59.066  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 19:07:59.082  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-17 19:11:10.746  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 8e1febf322cb with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-17 19:11:10.749  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-17 19:11:11.916  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-17 19:11:11.970  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interfaces.
+2023-06-17 19:11:12.334  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d4457605-2ad9-3506-921e-9a0edce6713f
+2023-06-17 19:11:13.224  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-17 19:11:13.236  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-17 19:11:13.238  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-17 19:11:13.340  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-17 19:11:13.341  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2542 ms
+2023-06-17 19:11:14.372  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-17 19:11:14.421  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-17 19:11:14.584  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-17 19:11:14.679  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 19:11:15.037  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 19:11:15.054  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-17 19:11:16.300  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-17 19:11:16.310  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 19:11:16.791  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-17 19:11:17.934  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-17 19:11:18.008  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-17 19:11:18.146  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpcService.grpcUserDetailsService
+2023-06-17 19:11:18.275  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-17 19:11:18.303  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 8.088 seconds (JVM running for 8.699)
+2023-06-17 19:11:22.174  INFO [auth-ms,43fdcecc0df9d4df,43fdcecc0df9d4df] 1 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-17 19:11:22.175  INFO [auth-ms,43fdcecc0df9d4df,43fdcecc0df9d4df] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-17 19:11:22.178  INFO [auth-ms,43fdcecc0df9d4df,43fdcecc0df9d4df] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-17 19:15:51.483  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-17 19:15:51.489  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-17 19:15:51.503  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 19:15:51.506  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 19:15:51.515  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-17 20:24:12.962  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 27d336d88266 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-17 20:24:12.967  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-17 20:24:14.484  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-17 20:24:14.543  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+2023-06-17 20:24:14.872  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d4457605-2ad9-3506-921e-9a0edce6713f
+2023-06-17 20:24:16.031  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-17 20:24:16.048  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-17 20:24:16.049  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-17 20:24:16.154  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-17 20:24:16.155  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3135 ms
+2023-06-17 20:24:17.006  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-17 20:24:17.042  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-17 20:24:17.197  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-17 20:24:17.288  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 20:24:17.604  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 20:24:17.619  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-17 20:24:18.908  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-17 20:24:18.915  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 20:24:19.281  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-17 20:24:20.749  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-17 20:24:21.478  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-17 20:24:21.975  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpcService.grpcUserDetailsService
+2023-06-17 20:24:22.173  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-17 20:24:22.203  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 9.793 seconds (JVM running for 10.352)
+2023-06-17 20:24:22.729  INFO [auth-ms,f2245ee77e184126,f2245ee77e184126] 1 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-17 20:24:22.729  INFO [auth-ms,f2245ee77e184126,f2245ee77e184126] 1 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-17 20:24:22.732  INFO [auth-ms,f2245ee77e184126,f2245ee77e184126] 1 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-17 20:26:08.267  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-17 20:26:08.280  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-17 20:26:08.321  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-17 20:26:08.326  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-17 20:26:08.338  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

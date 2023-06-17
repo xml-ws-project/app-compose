@@ -1,0 +1,824 @@
+2023-06-16 21:28:56.168  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 9e4a478419a1 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 21:28:56.173  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 21:29:00.990  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 21:29:04.512  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 21:29:05.704  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 21:29:05.735  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 21:29:05.743  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 21:29:06.093  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 21:29:06.096  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9826 ms
+2023-06-16 21:29:07.542  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 21:29:08.112  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7848321e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f4f843f, org.springframework.security.web.context.SecurityContextPersistenceFilter@70f4abc1, org.springframework.security.web.header.HeaderWriterFilter@17c53dfb, org.springframework.web.filter.CorsFilter@7b5833ee, org.springframework.security.web.authentication.logout.LogoutFilter@210a26b, com.vima.gateway.security.jwt.JwtAuthenticationFilter@70b48eb3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@63cf578f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@da34eb0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c6379c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e471884, org.springframework.security.web.session.SessionManagementFilter@7433ca19, org.springframework.security.web.access.ExceptionTranslationFilter@273aaab7, org.springframework.security.web.access.intercept.AuthorizationFilter@40bf0e15]
+2023-06-16 21:29:09.860  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 21:29:10.023  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 15.097 seconds (JVM running for 16.115)
+2023-06-16 21:30:08.443  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 21:31:24.053  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 4d6465b1c9bd with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 21:31:24.059  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 21:31:26.675  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 21:31:29.217  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 21:31:30.051  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 21:31:30.072  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 21:31:30.074  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 21:31:30.302  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 21:31:30.303  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6141 ms
+2023-06-16 21:31:31.609  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 21:31:31.810  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e471884, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27261190, org.springframework.security.web.context.SecurityContextPersistenceFilter@782cc5fa, org.springframework.security.web.header.HeaderWriterFilter@6dcf7b6a, org.springframework.web.filter.CorsFilter@543b0737, org.springframework.security.web.authentication.logout.LogoutFilter@60816371, com.vima.gateway.security.jwt.JwtAuthenticationFilter@7b8ea1db, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4dd1548e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b5da0b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@625264ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e46891d, org.springframework.security.web.session.SessionManagementFilter@7ec13984, org.springframework.security.web.access.ExceptionTranslationFilter@521ba38f, org.springframework.security.web.access.intercept.AuthorizationFilter@297bd171]
+2023-06-16 21:31:33.100  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 21:31:33.189  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 9.829 seconds (JVM running for 10.452)
+2023-06-16 21:32:18.756  INFO [gateway-ms,b37fb0abfd9b60a3,b37fb0abfd9b60a3] 1 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 21:32:18.757  INFO [gateway-ms,b37fb0abfd9b60a3,b37fb0abfd9b60a3] 1 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 21:32:18.759  INFO [gateway-ms,b37fb0abfd9b60a3,b37fb0abfd9b60a3] 1 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-16 21:37:39.203  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 21:39:20.941  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 9e5d7d32fbd1 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 21:39:20.953  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 21:39:23.916  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 21:39:27.338  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 21:39:28.815  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 21:39:28.880  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 21:39:28.882  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 21:39:29.384  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 21:39:29.385  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8322 ms
+2023-06-16 21:39:31.038  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 21:39:31.268  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@121ddca4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@297bd171, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ec13984, org.springframework.security.web.header.HeaderWriterFilter@5a48d186, org.springframework.web.filter.CorsFilter@118cbded, org.springframework.security.web.authentication.logout.LogoutFilter@5a13f1f7, com.vima.gateway.security.jwt.JwtAuthenticationFilter@451e2fa9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64ec1459, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20027c44, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@785a4557, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cc26df, org.springframework.security.web.session.SessionManagementFilter@1573e8a5, org.springframework.security.web.access.ExceptionTranslationFilter@76b305e1, org.springframework.security.web.access.intercept.AuthorizationFilter@1752e45c]
+2023-06-16 21:39:33.100  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 21:39:33.226  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 13.064 seconds (JVM running for 13.881)
+2023-06-16 21:40:07.272  INFO [gateway-ms,413fd8dd8fdc0064,413fd8dd8fdc0064] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 21:40:07.292  INFO [gateway-ms,413fd8dd8fdc0064,413fd8dd8fdc0064] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 21:40:07.308  INFO [gateway-ms,413fd8dd8fdc0064,413fd8dd8fdc0064] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2023-06-16 22:00:56.022 ERROR [gateway-ms,4ec931256b07d8ad,4ec931256b07d8ad] 1 --- [http-nio-8081-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 22:00:57.067  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-06-16 22:00:57.069  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.18.jar:5.3.18]
+	... 9 common frames omitted
+
+2023-06-16 22:02:19.141  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 22:02:24.088  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 9e5d7d32fbd1 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 22:02:24.090  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 22:02:25.134  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 22:02:25.889  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 22:02:26.194  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 22:02:26.213  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 22:02:26.214  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 22:02:26.321  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 22:02:26.322  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2171 ms
+2023-06-16 22:02:27.071  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 22:02:27.152  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@297bd171, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@118cbded, org.springframework.security.web.context.SecurityContextPersistenceFilter@14485747, org.springframework.security.web.header.HeaderWriterFilter@521ba38f, org.springframework.web.filter.CorsFilter@4cc26df, org.springframework.security.web.authentication.logout.LogoutFilter@5dae5a70, com.vima.gateway.security.jwt.JwtAuthenticationFilter@4fb64a52, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1aac0a47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7eae55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2bf3ec4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7848321e, org.springframework.security.web.session.SessionManagementFilter@38022758, org.springframework.security.web.access.ExceptionTranslationFilter@6be766d1, org.springframework.security.web.access.intercept.AuthorizationFilter@5ed65e4b]
+2023-06-16 22:02:27.679  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 22:02:27.725  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 4.104 seconds (JVM running for 4.681)
+2023-06-16 22:02:36.830  INFO [gateway-ms,30c3046521fc8f43,30c3046521fc8f43] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 22:02:36.831  INFO [gateway-ms,30c3046521fc8f43,30c3046521fc8f43] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 22:02:36.838  INFO [gateway-ms,30c3046521fc8f43,30c3046521fc8f43] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-06-16 22:02:43.636 ERROR [gateway-ms,483849347a03ca96,483849347a03ca96] 1 --- [http-nio-8081-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 22:02:44.708  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-06-16 22:02:44.710  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.18.jar:5.3.18]
+	... 9 common frames omitted
+
+2023-06-16 22:04:23.447  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 22:05:08.681  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 2a75c60ab2e3 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 22:05:08.688  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 22:05:11.244  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 22:05:14.301  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 22:05:15.014  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 22:05:15.036  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 22:05:15.040  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 22:05:15.220  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 22:05:15.222  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6448 ms
+2023-06-16 22:05:16.763  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 22:05:17.068  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c77344f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@121ddca4, org.springframework.security.web.context.SecurityContextPersistenceFilter@79d4ff58, org.springframework.security.web.header.HeaderWriterFilter@77bb916f, org.springframework.web.filter.CorsFilter@297bd171, org.springframework.security.web.authentication.logout.LogoutFilter@67fac095, com.vima.gateway.security.jwt.JwtAuthenticationFilter@175c5c3a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4751cd3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5086623f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@da34eb0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@118cbded, org.springframework.security.web.session.SessionManagementFilter@3e753289, org.springframework.security.web.access.ExceptionTranslationFilter@e07b4db, org.springframework.security.web.access.intercept.AuthorizationFilter@3f06ebe0]
+2023-06-16 22:05:18.621  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 22:05:18.702  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 10.643 seconds (JVM running for 11.195)
+2023-06-16 22:06:03.057  INFO [gateway-ms,7ca63e6c41f09a29,7ca63e6c41f09a29] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 22:06:03.058  INFO [gateway-ms,7ca63e6c41f09a29,7ca63e6c41f09a29] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 22:06:03.060  INFO [gateway-ms,7ca63e6c41f09a29,7ca63e6c41f09a29] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-16 22:06:28.805 ERROR [gateway-ms,789e0b8981b4fd91,789e0b8981b4fd91] 1 --- [http-nio-8081-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 22:06:29.852  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-06-16 22:06:29.854  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.18.jar:5.3.18]
+	... 9 common frames omitted
+
+2023-06-16 22:10:01.621  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 22:14:51.469  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 2a75c60ab2e3 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 22:14:51.474  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 22:14:52.376  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 22:14:53.080  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 22:14:53.355  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 22:14:53.367  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 22:14:53.368  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 22:14:53.444  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 22:14:53.445  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1920 ms
+2023-06-16 22:14:53.965  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 22:14:54.056  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@194b9783, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45297e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@b1d19ff, org.springframework.security.web.header.HeaderWriterFilter@51132514, org.springframework.web.filter.CorsFilter@4dd1548e, org.springframework.security.web.authentication.logout.LogoutFilter@37ffe4f3, com.vima.gateway.security.jwt.JwtAuthenticationFilter@47fcefb3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5a13f1f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69f9b561, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ec13984, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54bb1194, org.springframework.security.web.session.SessionManagementFilter@7adae08e, org.springframework.security.web.access.ExceptionTranslationFilter@1d1c37d5, org.springframework.security.web.access.intercept.AuthorizationFilter@4751cd3]
+2023-06-16 22:14:54.482  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 22:14:54.509  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 3.478 seconds (JVM running for 4.0)
+2023-06-16 22:14:58.971  INFO [gateway-ms,c446f1ec988b0c3d,c446f1ec988b0c3d] 1 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 22:14:58.972  INFO [gateway-ms,c446f1ec988b0c3d,c446f1ec988b0c3d] 1 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 22:14:58.974  INFO [gateway-ms,c446f1ec988b0c3d,c446f1ec988b0c3d] 1 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-16 22:14:59.360 ERROR [gateway-ms,c446f1ec988b0c3d,c446f1ec988b0c3d] 1 --- [http-nio-8081-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.NullPointerException: Cannot invoke "com.vima.gateway.model.User.getId()" because "user" is null
+	at com.vima.gateway.security.jwt.JwtService.isTokenValid(JwtService.java:87) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.gateway.security.jwt.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:44) ~[classes/:0.0.1-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:117) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:225) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:190) ~[spring-security-web-5.8.0.jar:5.8.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68) ~[spring-cloud-sleuth-instrumentation-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:129) ~[spring-cloud-sleuth-autoconfigure-3.1.0.jar:3.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.6.jar:2.6.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:74) ~[spring-cloud-sleuth-instrumentation-3.1.0.jar:3.1.0]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 22:15:00.489  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-06-16 22:15:00.491  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.18.jar:5.3.18]
+	... 9 common frames omitted
+
+2023-06-16 22:16:19.395  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 22:17:27.198  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 0bfd1b4b94c8 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 22:17:27.203  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 22:17:29.502  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 22:17:31.176  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 22:17:31.709  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 22:17:31.737  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 22:17:31.740  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 22:17:31.908  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 22:17:31.912  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4564 ms
+2023-06-16 22:17:33.110  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 22:17:33.310  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@194b9783, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45297e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@b1d19ff, org.springframework.security.web.header.HeaderWriterFilter@51132514, org.springframework.web.filter.CorsFilter@4dd1548e, org.springframework.security.web.authentication.logout.LogoutFilter@37ffe4f3, com.vima.gateway.security.jwt.JwtAuthenticationFilter@2c48cede, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5a13f1f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69f9b561, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ec13984, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54bb1194, org.springframework.security.web.session.SessionManagementFilter@7adae08e, org.springframework.security.web.access.ExceptionTranslationFilter@1d1c37d5, org.springframework.security.web.access.intercept.AuthorizationFilter@4751cd3]
+2023-06-16 22:17:34.749  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 22:17:34.824  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 8.434 seconds (JVM running for 9.455)
+2023-06-16 22:18:18.348  INFO [gateway-ms,f22e2949cc73071a,f22e2949cc73071a] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 22:18:18.349  INFO [gateway-ms,f22e2949cc73071a,f22e2949cc73071a] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 22:18:18.351  INFO [gateway-ms,f22e2949cc73071a,f22e2949cc73071a] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-16 22:18:31.974 ERROR [gateway-ms,7f52e3137a70d7bc,7f52e3137a70d7bc] 1 --- [http-nio-8081-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 22:18:33.018  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-06-16 22:18:33.020  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.18.jar:5.3.18]
+	... 9 common frames omitted
+
+2023-06-16 22:19:02.128  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 22:21:01.579  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 09f35f682de6 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 22:21:01.583  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 22:21:02.872  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 22:21:04.092  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 22:21:04.740  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 22:21:04.773  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 22:21:04.776  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 22:21:04.929  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 22:21:04.935  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3286 ms
+2023-06-16 22:21:06.120  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 22:21:06.330  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f4f843f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b5833ee, org.springframework.security.web.context.SecurityContextPersistenceFilter@26d028f7, org.springframework.security.web.header.HeaderWriterFilter@184de357, org.springframework.web.filter.CorsFilter@1e471884, org.springframework.security.web.authentication.logout.LogoutFilter@2dc21583, com.vima.gateway.security.jwt.JwtAuthenticationFilter@4fb64a52, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@194b9783, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@785a4557, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7df4709e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27261190, org.springframework.security.web.session.SessionManagementFilter@5d221b20, org.springframework.security.web.access.ExceptionTranslationFilter@77bb916f, org.springframework.security.web.access.intercept.AuthorizationFilter@2c77344f]
+2023-06-16 22:21:07.218  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 22:21:07.298  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 6.18 seconds (JVM running for 6.569)
+2023-06-16 22:21:56.696  INFO [gateway-ms,d5059e8a87b98bb9,d5059e8a87b98bb9] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 22:21:56.699  INFO [gateway-ms,d5059e8a87b98bb9,d5059e8a87b98bb9] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 22:21:56.703  INFO [gateway-ms,d5059e8a87b98bb9,d5059e8a87b98bb9] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-06-16 22:23:07.991 ERROR [gateway-ms,9e4f02b8a186ade8,9e4f02b8a186ade8] 1 --- [http-nio-8081-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 22:23:09.034  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-06-16 22:23:09.036  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.18.jar:5.3.18]
+	... 9 common frames omitted
+
+2023-06-16 22:25:29.296  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 22:27:27.660  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on f3be260105a1 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 22:27:27.663  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 22:27:31.338  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 22:27:33.456  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 22:27:34.232  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 22:27:34.283  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 22:27:34.298  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 22:27:34.495  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 22:27:34.501  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6772 ms
+2023-06-16 22:27:35.895  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 22:27:36.120  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7b5833ee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e471884, org.springframework.security.web.context.SecurityContextPersistenceFilter@a2df0d5, org.springframework.security.web.header.HeaderWriterFilter@efe49ab, org.springframework.web.filter.CorsFilter@27261190, org.springframework.security.web.authentication.logout.LogoutFilter@6cbdd1c5, com.vima.gateway.security.jwt.JwtAuthenticationFilter@a91119b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@45297e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bf3ec4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2bfa17b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@543b0737, org.springframework.security.web.session.SessionManagementFilter@79d4ff58, org.springframework.security.web.access.ExceptionTranslationFilter@5a48d186, org.springframework.security.web.access.intercept.AuthorizationFilter@121ddca4]
+2023-06-16 22:27:37.980  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 22:27:38.042  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 11.02 seconds (JVM running for 11.871)
+2023-06-16 22:28:15.078  INFO [gateway-ms,74da497ace370f0b,74da497ace370f0b] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 22:28:15.080  INFO [gateway-ms,74da497ace370f0b,74da497ace370f0b] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 22:28:15.085  INFO [gateway-ms,74da497ace370f0b,74da497ace370f0b] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-06-16 22:28:53.074 ERROR [gateway-ms,1e998ac1d0d5949c,1e998ac1d0d5949c] 1 --- [http-nio-8081-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 22:28:54.110  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-06-16 22:28:54.112  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.18.jar:5.3.18]
+	... 9 common frames omitted
+
+2023-06-16 22:47:33.299  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 22:49:38.392  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on ae0fa15ff207 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 22:49:38.397  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 22:49:40.092  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 22:49:41.820  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 22:49:42.386  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 22:49:42.411  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 22:49:42.412  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 22:49:42.561  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 22:49:42.562  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4065 ms
+2023-06-16 22:49:43.756  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 22:49:44.015  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1d7c9811, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b362f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bf3ec4, org.springframework.security.web.header.HeaderWriterFilter@5d221b20, org.springframework.web.filter.CorsFilter@6451a288, org.springframework.security.web.authentication.logout.LogoutFilter@1aac0a47, com.vima.gateway.security.jwt.JwtAuthenticationFilter@7b8ea1db, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@481ed95c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40fe8fd5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c8b10b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79cdf2d4, org.springframework.security.web.session.SessionManagementFilter@5086623f, org.springframework.security.web.access.ExceptionTranslationFilter@3e753289, org.springframework.security.web.access.intercept.AuthorizationFilter@58cda03f]
+2023-06-16 22:49:45.498  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 22:49:45.557  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 7.952 seconds (JVM running for 8.507)
+2023-06-16 22:50:31.685  INFO [gateway-ms,07f25bed71e85bcd,07f25bed71e85bcd] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 22:50:31.686  INFO [gateway-ms,07f25bed71e85bcd,07f25bed71e85bcd] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 22:50:31.688  INFO [gateway-ms,07f25bed71e85bcd,07f25bed71e85bcd] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-16 22:53:14.018 ERROR [gateway-ms,b60d8a3a34c50731,b60d8a3a34c50731] 1 --- [http-nio-8081-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 22:53:15.053  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-06-16 22:53:15.055  WARN [gateway-ms,,] 1 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.18.jar:5.3.18]
+	... 9 common frames omitted
+
+2023-06-16 22:55:33.049  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 22:57:04.642  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 24e23d6caa1a with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 22:57:04.645  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 22:57:06.168  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 22:57:07.468  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 22:57:08.219  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 22:57:08.245  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 22:57:08.249  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 22:57:08.435  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 22:57:08.436  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3719 ms
+2023-06-16 22:57:09.460  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 22:57:09.575  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@455da438, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60652518, org.springframework.security.web.context.SecurityContextPersistenceFilter@395281c2, org.springframework.security.web.header.HeaderWriterFilter@3e28dc96, org.springframework.web.filter.CorsFilter@438aaa9f, org.springframework.security.web.authentication.logout.LogoutFilter@329b331f, com.vima.gateway.security.jwt.JwtAuthenticationFilter@6ad6443, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@586728e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26d028f7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f2d3391, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f06ebe0, org.springframework.security.web.session.SessionManagementFilter@efe49ab, org.springframework.security.web.access.ExceptionTranslationFilter@79604abe, org.springframework.security.web.access.intercept.AuthorizationFilter@1109730f]
+2023-06-16 22:57:10.308  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 22:57:10.361  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 6.242 seconds (JVM running for 6.675)
+2023-06-16 22:57:46.612  INFO [gateway-ms,453ee2ddee6c4cc7,453ee2ddee6c4cc7] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 22:57:46.613  INFO [gateway-ms,453ee2ddee6c4cc7,453ee2ddee6c4cc7] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 22:57:46.615  INFO [gateway-ms,453ee2ddee6c4cc7,453ee2ddee6c4cc7] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-16 22:59:11.843  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 23:01:19.252  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 4566e1e89494 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 23:01:19.255  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 23:01:21.305  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 23:01:22.694  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://zipkin:9411/api/v2/spans/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: "404 Not Found"}]
+2023-06-16 23:01:23.246  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 23:01:23.265  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 23:01:23.267  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 23:01:23.423  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 23:01:23.424  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4013 ms
+2023-06-16 23:01:24.532  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 23:01:24.742  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15186ce0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@745926c3, org.springframework.security.web.context.SecurityContextPersistenceFilter@44eb2452, org.springframework.security.web.header.HeaderWriterFilter@1be8c122, org.springframework.web.filter.CorsFilter@75dd0f94, org.springframework.security.web.authentication.logout.LogoutFilter@7df4709e, com.vima.gateway.security.jwt.JwtAuthenticationFilter@3c18942, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a0d313, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@efe49ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4eb63dc8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72324965, org.springframework.security.web.session.SessionManagementFilter@79604abe, org.springframework.security.web.access.ExceptionTranslationFilter@30c7be6f, org.springframework.security.web.access.intercept.AuthorizationFilter@60816371]
+2023-06-16 23:01:26.313  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 23:01:26.488  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 7.831 seconds (JVM running for 8.352)
+2023-06-16 23:01:51.989  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 23:03:19.453  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 8416826ab0d4 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 23:03:19.457  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 23:03:21.556  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 23:03:24.529  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 23:03:24.682  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 23:03:24.683  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 23:03:24.800  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 23:03:24.802  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5281 ms
+2023-06-16 23:03:26.124  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 23:03:26.274  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@121ddca4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@297bd171, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ec13984, org.springframework.security.web.header.HeaderWriterFilter@5a48d186, org.springframework.web.filter.CorsFilter@118cbded, org.springframework.security.web.authentication.logout.LogoutFilter@5a13f1f7, com.vima.gateway.security.jwt.JwtAuthenticationFilter@7b6141f0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64ec1459, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20027c44, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@785a4557, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cc26df, org.springframework.security.web.session.SessionManagementFilter@1573e8a5, org.springframework.security.web.access.ExceptionTranslationFilter@76b305e1, org.springframework.security.web.access.intercept.AuthorizationFilter@1752e45c]
+2023-06-16 23:03:27.359  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 23:03:27.492  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 8.611 seconds (JVM running for 9.086)
+2023-06-16 23:03:57.267  INFO [gateway-ms,3a2748de91e9a77f,3a2748de91e9a77f] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 23:03:57.268  INFO [gateway-ms,3a2748de91e9a77f,3a2748de91e9a77f] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 23:03:57.273  INFO [gateway-ms,3a2748de91e9a77f,3a2748de91e9a77f] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-06-16 23:04:07.203  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 23:06:01.335  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on fcf9205c73e7 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 23:06:01.338  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 23:06:04.142  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 23:06:05.558  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2023-06-16 23:06:06.047  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 23:06:06.062  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 23:06:06.062  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 23:06:06.189  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 23:06:06.192  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4803 ms
+2023-06-16 23:06:07.260  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 23:06:07.369  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1d7c9811, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b362f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bf3ec4, org.springframework.security.web.header.HeaderWriterFilter@5d221b20, org.springframework.web.filter.CorsFilter@6451a288, org.springframework.security.web.authentication.logout.LogoutFilter@1aac0a47, com.vima.gateway.security.jwt.JwtAuthenticationFilter@4fb64a52, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@481ed95c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40fe8fd5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c8b10b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79cdf2d4, org.springframework.security.web.session.SessionManagementFilter@5086623f, org.springframework.security.web.access.ExceptionTranslationFilter@3e753289, org.springframework.security.web.access.intercept.AuthorizationFilter@58cda03f]
+2023-06-16 23:06:08.313  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 23:06:08.350  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 7.452 seconds (JVM running for 7.901)
+2023-06-16 23:06:18.472  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 23:08:45.443  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 3fb6c499e1ce with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 23:08:45.447  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 23:08:47.293  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 23:08:50.256  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 23:08:50.335  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 23:08:50.336  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 23:08:50.447  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 23:08:50.447  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4913 ms
+2023-06-16 23:08:51.728  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 23:08:52.002  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@118cbded, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cc26df, org.springframework.security.web.context.SecurityContextPersistenceFilter@59fea5f5, org.springframework.security.web.header.HeaderWriterFilter@2086d469, org.springframework.web.filter.CorsFilter@7848321e, org.springframework.security.web.authentication.logout.LogoutFilter@7686f701, com.vima.gateway.security.jwt.JwtAuthenticationFilter@3cb6e0ee, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4b3ad7ca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d84e363, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b5da0b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f4f843f, org.springframework.security.web.session.SessionManagementFilter@69f9b561, org.springframework.security.web.access.ExceptionTranslationFilter@7adae08e, org.springframework.security.web.access.intercept.AuthorizationFilter@481ed95c]
+2023-06-16 23:08:53.360  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 23:08:53.519  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 8.915 seconds (JVM running for 9.446)
+2023-06-16 23:09:01.543  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 23:14:25.799  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 017b49171c39 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 23:14:25.804  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 23:14:28.442  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 23:14:31.829  WARN [gateway-ms,,] 1 --- [main] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://zipkin:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://zipkin:9411/api/v2/spans": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out}]
+2023-06-16 23:14:33.235  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 23:14:33.258  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 23:14:33.260  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 23:14:33.558  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 23:14:33.559  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7658 ms
+2023-06-16 23:14:34.527  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 23:14:34.647  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1109730f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f42366, org.springframework.security.web.context.SecurityContextPersistenceFilter@6dcf7b6a, org.springframework.security.web.header.HeaderWriterFilter@79604abe, org.springframework.web.filter.CorsFilter@46c662f2, org.springframework.security.web.authentication.logout.LogoutFilter@5c8b10b4, com.vima.gateway.security.jwt.JwtAuthenticationFilter@3f5dfe69, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@210a26b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79d4ff58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70f4abc1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4afdfc0f, org.springframework.security.web.session.SessionManagementFilter@5a48d186, org.springframework.security.web.access.ExceptionTranslationFilter@55053f81, org.springframework.security.web.access.intercept.AuthorizationFilter@6785c9fa]
+2023-06-16 23:14:36.392  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 23:14:36.442  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 11.483 seconds (JVM running for 12.259)
+2023-06-16 23:15:16.213  INFO [gateway-ms,5a18096afe50a748,5a18096afe50a748] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 23:15:16.214  INFO [gateway-ms,5a18096afe50a748,5a18096afe50a748] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 23:15:16.218  INFO [gateway-ms,5a18096afe50a748,5a18096afe50a748] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-06-16 23:15:39.181 ERROR [gateway-ms,8295efc942fe9d33,8295efc942fe9d33] 1 --- [http-nio-8081-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 23:16:16.314  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 23:22:03.841  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on ee7aa20e1e7d with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 23:22:03.844  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 23:22:05.129  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 23:22:06.787  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 23:22:06.829  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 23:22:06.838  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 23:22:06.912  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 23:22:06.913  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3012 ms
+2023-06-16 23:22:07.591  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 23:22:07.711  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ed65e4b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@481ed95c, org.springframework.security.web.context.SecurityContextPersistenceFilter@69f9b561, org.springframework.security.web.header.HeaderWriterFilter@6be766d1, org.springframework.web.filter.CorsFilter@40cf6254, org.springframework.security.web.authentication.logout.LogoutFilter@2f60cbf2, com.vima.gateway.security.jwt.JwtAuthenticationFilter@7b8ea1db, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@75dd0f94, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f2d3391, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20027c44, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40bf0e15, org.springframework.security.web.session.SessionManagementFilter@4eb63dc8, org.springframework.security.web.access.ExceptionTranslationFilter@6e73974, org.springframework.security.web.access.intercept.AuthorizationFilter@30798137]
+2023-06-16 23:22:08.636  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 23:22:08.738  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 5.294 seconds (JVM running for 5.673)
+2023-06-16 23:22:13.852  INFO [gateway-ms,6b1b3107a6b46b0b,6b1b3107a6b46b0b] 1 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 23:22:13.853  INFO [gateway-ms,6b1b3107a6b46b0b,6b1b3107a6b46b0b] 1 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 23:22:13.856  INFO [gateway-ms,6b1b3107a6b46b0b,6b1b3107a6b46b0b] 1 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-16 23:22:27.607  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 23:23:15.617  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on cfda1dd8b5ca with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 23:23:15.629  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 23:23:17.266  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 23:23:19.315  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 23:23:19.336  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 23:23:19.337  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 23:23:19.520  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 23:23:19.522  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3811 ms
+2023-06-16 23:23:20.786  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 23:23:20.982  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@60652518, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@438aaa9f, org.springframework.security.web.context.SecurityContextPersistenceFilter@41d20f06, org.springframework.security.web.header.HeaderWriterFilter@44eb2452, org.springframework.web.filter.CorsFilter@3f06ebe0, org.springframework.security.web.authentication.logout.LogoutFilter@640a8f93, com.vima.gateway.security.jwt.JwtAuthenticationFilter@70b48eb3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3316527e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a2df0d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71b0289b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1752e45c, org.springframework.security.web.session.SessionManagementFilter@6dcf7b6a, org.springframework.security.web.access.ExceptionTranslationFilter@6b126187, org.springframework.security.web.access.intercept.AuthorizationFilter@1f42366]
+2023-06-16 23:23:22.934  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 23:23:23.107  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 8.016 seconds (JVM running for 8.545)
+2023-06-16 23:24:01.635  INFO [gateway-ms,f866657940934b86,f866657940934b86] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 23:24:01.636  INFO [gateway-ms,f866657940934b86,f866657940934b86] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 23:24:01.638  INFO [gateway-ms,f866657940934b86,f866657940934b86] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-16 23:24:02.870 ERROR [gateway-ms,603f4b3889316526,603f4b3889316526] 1 --- [http-nio-8081-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 23:24:19.219  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-16 23:36:31.611  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Starting GatewayApplication v0.0.1-SNAPSHOT using Java 20.0.1 on cfda1dd8b5ca with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-16 23:36:31.613  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 23:36:32.524  INFO [gateway-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e892005d-b71e-3188-8afe-d003b25c0a77
+2023-06-16 23:36:33.610  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-06-16 23:36:33.626  INFO [gateway-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-16 23:36:33.627  INFO [gateway-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-16 23:36:33.699  INFO [gateway-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-16 23:36:33.699  INFO [gateway-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2053 ms
+2023-06-16 23:36:34.150  INFO [gateway-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-16 23:36:34.198  INFO [gateway-ms,,] 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40bf0e15, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c77344f, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d221b20, org.springframework.security.web.header.HeaderWriterFilter@273aaab7, org.springframework.web.filter.CorsFilter@121ddca4, org.springframework.security.web.authentication.logout.LogoutFilter@4e6cbdf1, com.vima.gateway.security.jwt.JwtAuthenticationFilter@7b6141f0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@194911c1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@563172d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ef0e576, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@297bd171, org.springframework.security.web.session.SessionManagementFilter@41d20f06, org.springframework.security.web.access.ExceptionTranslationFilter@31940704, org.springframework.security.web.access.intercept.AuthorizationFilter@438aaa9f]
+2023-06-16 23:36:34.670  INFO [gateway-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-16 23:36:34.753  INFO [gateway-ms,,] 1 --- [main] com.vima.gateway.GatewayApplication      : Started GatewayApplication in 3.479 seconds (JVM running for 3.908)
+2023-06-16 23:36:41.646  INFO [gateway-ms,97df03a24981c357,97df03a24981c357] 1 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 23:36:41.647  INFO [gateway-ms,97df03a24981c357,97df03a24981c357] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-16 23:36:41.649  INFO [gateway-ms,97df03a24981c357,97df03a24981c357] 1 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-16 23:37:08.045 ERROR [gateway-ms,882d4eda27e05b83,882d4eda27e05b83] 1 --- [http-nio-8081-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.grpc.StatusRuntimeException: UNAVAILABLE: io exception] with root cause
+
+java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.newConnectException0(Errors.java:155) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:320) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.47.0.jar:1.47.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-16 23:37:50.340  INFO [gateway-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
