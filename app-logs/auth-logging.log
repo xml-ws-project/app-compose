@@ -696,3 +696,477 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'a
 2023-06-18 01:20:41.202  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-06-18 01:20:41.208  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-06-18 01:20:41.219  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 10:52:45.444  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 11fb83284ed0 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 10:52:45.447  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 10:52:47.385  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 10:52:47.481  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+2023-06-18 10:52:48.093  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4a889e7f-2d96-3f2a-903e-c4db0e910de1
+2023-06-18 10:52:49.443  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-18 10:52:49.476  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 10:52:49.487  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 10:52:49.594  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 10:52:49.596  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3869 ms
+2023-06-18 10:52:51.307  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 10:52:51.442  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 10:52:51.744  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 10:52:51.889  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 10:52:52.351  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 10:52:52.417  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-18 10:52:54.171  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 10:52:54.194  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 10:52:55.041  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-18 10:52:56.331  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 10:52:56.509  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-18 10:52:56.655  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingService, bean: ratingGrpcService, class: com.vima.auth.grpc_service.RatingGrpcService
+2023-06-18 10:52:56.662  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpc_service.grpcUserDetailsService
+2023-06-18 10:52:56.731  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-18 10:52:56.752  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 11.866 seconds (JVM running for 12.58)
+2023-06-18 10:53:03.711  INFO [auth-ms,498a63e4975aea63,498a63e4975aea63] 1 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 10:53:03.712  INFO [auth-ms,498a63e4975aea63,498a63e4975aea63] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 10:53:03.715  INFO [auth-ms,498a63e4975aea63,498a63e4975aea63] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-18 10:54:05.948 ERROR [auth-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@4b216ac9
+
+io.grpc.StatusRuntimeException: UNKNOWN
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:262) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:243) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:156) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at com.vima.gateway.RecommendationServiceGrpc$RecommendationServiceBlockingStub.createUserNode(RecommendationServiceGrpc.java:368) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.createUserNode(grpcUserDetailsService.java:71) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.register(grpcUserDetailsService.java:65) ~[classes/:0.0.1-SNAPSHOT]
+	at communication.userDetailsServiceGrpc$MethodHandlers.invoke(userDetailsServiceGrpc.java:622) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 10:54:49.192  WARN [auth-ms,58583eccedb0622b,58583eccedb0622b] 1 --- [grpc-default-executor-0] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2023-06-18 10:54:49.193 ERROR [auth-ms,58583eccedb0622b,58583eccedb0622b] 1 --- [grpc-default-executor-0] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'admin' for key 'user.UK_sb8bbouer5wak8vyiiy4pf2bx'
+2023-06-18 10:54:49.195  INFO [auth-ms,58583eccedb0622b,58583eccedb0622b] 1 --- [grpc-default-executor-0] o.h.e.j.b.internal.AbstractBatchImpl     : HHH000010: On release of batch it still contained JDBC statements
+2023-06-18 10:54:49.209 ERROR [auth-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@46c5276
+
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [user.UK_sb8bbouer5wak8vyiiy4pf2bx]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276) ~[spring-orm-5.3.18.jar:5.3.18]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.18.jar:5.3.18]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566) ~[spring-orm-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.commit(TracePlatformTransactionManager.java:121) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy175.commit(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.6.3.jar:2.6.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy157.save(Unknown Source) ~[na:na]
+	at com.vima.auth.service.UserService.registerUser(UserService.java:30) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.register(grpcUserDetailsService.java:63) ~[classes/:0.0.1-SNAPSHOT]
+	at communication.userDetailsServiceGrpc$MethodHandlers.invoke(userDetailsServiceGrpc.java:622) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3375) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at java.base/java.util.LinkedHashMap.forEach(Unknown Source) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3290) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2425) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.18.jar:5.3.18]
+	... 39 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin' for key 'user.UK_sb8bbouer5wak8vyiiy4pf2bx'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	... 60 common frames omitted
+
+2023-06-18 10:55:13.729  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 10:55:13.734  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 10:55:13.749  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 10:55:13.752  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-18 10:55:13.760  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 11:10:08.472  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 96fe66b48a83 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 11:10:08.476  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 11:10:09.300  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 11:10:09.340  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2023-06-18 11:10:09.632  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4a889e7f-2d96-3f2a-903e-c4db0e910de1
+2023-06-18 11:10:10.402  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-18 11:10:10.443  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 11:10:10.444  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 11:10:10.582  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 11:10:10.583  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2069 ms
+2023-06-18 11:10:11.539  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 11:10:11.600  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 11:10:11.760  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 11:10:11.852  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 11:10:12.376  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 11:10:12.401  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-18 11:10:14.344  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 11:10:14.361  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:10:15.151  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-18 11:10:16.491  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 11:10:16.553  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-18 11:10:16.628  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingService, bean: ratingGrpcService, class: com.vima.auth.grpc_service.RatingGrpcService
+2023-06-18 11:10:16.633  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpc_service.grpcUserDetailsService
+2023-06-18 11:10:16.707  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-18 11:10:16.733  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 8.594 seconds (JVM running for 9.099)
+2023-06-18 11:10:18.084  INFO [auth-ms,9c1ed4404302aad5,9c1ed4404302aad5] 1 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 11:10:18.085  INFO [auth-ms,9c1ed4404302aad5,9c1ed4404302aad5] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 11:10:18.088  INFO [auth-ms,9c1ed4404302aad5,9c1ed4404302aad5] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 11:11:06.966 ERROR [auth-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@743aafc
+
+io.grpc.StatusRuntimeException: UNKNOWN
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:262) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:243) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:156) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at com.vima.gateway.RecommendationServiceGrpc$RecommendationServiceBlockingStub.createUserNode(RecommendationServiceGrpc.java:368) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.createUserNode(grpcUserDetailsService.java:71) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.register(grpcUserDetailsService.java:65) ~[classes/:0.0.1-SNAPSHOT]
+	at communication.userDetailsServiceGrpc$MethodHandlers.invoke(userDetailsServiceGrpc.java:622) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 11:12:33.662 ERROR [auth-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@3836e0a6
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:262) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:243) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:156) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at com.vima.gateway.RecommendationServiceGrpc$RecommendationServiceBlockingStub.createUserNode(RecommendationServiceGrpc.java:368) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.createUserNode(grpcUserDetailsService.java:71) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.register(grpcUserDetailsService.java:65) ~[classes/:0.0.1-SNAPSHOT]
+	at communication.userDetailsServiceGrpc$MethodHandlers.invoke(userDetailsServiceGrpc.java:622) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: No route to host: recommendation-ms/172.19.0.10:9095
+Caused by: java.net.ConnectException: finishConnect(..) failed: No route to host
+	at io.grpc.netty.shaded.io.netty.channel.unix.Errors.throwConnectException(Errors.java:124) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at io.grpc.netty.shaded.io.netty.channel.unix.Socket.finishConnect(Socket.java:243) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:672) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:649) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:529) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:465) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[grpc-netty-shaded-1.30.0.jar:1.30.0]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 11:13:06.809  WARN [auth-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.ManagedChannelImpl      : [Channel<12>: (recommendation-ms:9095)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host recommendation-ms, cause=java.lang.RuntimeException: java.net.UnknownHostException: recommendation-ms: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:224)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:283)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:319)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.net.UnknownHostException: recommendation-ms: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Unknown Source)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(Unknown Source)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName(Unknown Source)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:632)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:220)
+	... 5 more
+}
+2023-06-18 11:13:06.932  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 11:13:06.942  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 11:13:06.969  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:13:06.972  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-18 11:13:06.984  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 11:21:26.588  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 45d5d62fa9f3 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 11:21:26.596  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 11:21:30.184  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 11:21:30.356  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 2 JPA repository interfaces.
+2023-06-18 11:21:31.108  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4a889e7f-2d96-3f2a-903e-c4db0e910de1
+2023-06-18 11:21:32.367  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-18 11:21:32.396  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 11:21:32.398  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 11:21:32.612  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 11:21:32.615  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5874 ms
+2023-06-18 11:21:34.001  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 11:21:34.054  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 11:21:34.288  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 11:21:34.422  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 11:21:35.052  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 11:21:35.085  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-18 11:21:37.010  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 11:21:37.020  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:21:37.688  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-18 11:21:38.712  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 11:21:38.819  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-18 11:21:39.053  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingService, bean: ratingGrpcService, class: com.vima.auth.grpc_service.RatingGrpcService
+2023-06-18 11:21:39.063  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpc_service.grpcUserDetailsService
+2023-06-18 11:21:39.211  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-18 11:21:39.242  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 13.894 seconds (JVM running for 15.03)
+2023-06-18 11:21:43.779  INFO [auth-ms,a501136e70994de7,a501136e70994de7] 1 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 11:21:43.780  INFO [auth-ms,a501136e70994de7,a501136e70994de7] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 11:21:43.783  INFO [auth-ms,a501136e70994de7,a501136e70994de7] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 11:28:22.660 ERROR [auth-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@2baba842
+
+io.grpc.StatusRuntimeException: UNKNOWN
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:262) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:243) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:156) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at com.vima.gateway.RecommendationServiceGrpc$RecommendationServiceBlockingStub.createUserNode(RecommendationServiceGrpc.java:368) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.createUserNode(grpcUserDetailsService.java:71) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.register(grpcUserDetailsService.java:65) ~[classes/:0.0.1-SNAPSHOT]
+	at communication.userDetailsServiceGrpc$MethodHandlers.invoke(userDetailsServiceGrpc.java:622) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 11:30:33.045  WARN [auth-ms,4c3dc0bb5bb6537c,4c3dc0bb5bb6537c] 1 --- [grpc-default-executor-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2023-06-18 11:30:33.049 ERROR [auth-ms,4c3dc0bb5bb6537c,4c3dc0bb5bb6537c] 1 --- [grpc-default-executor-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'stanisica@gmail.com' for key 'user.UK_sb8bbouer5wak8vyiiy4pf2bx'
+2023-06-18 11:30:33.052  INFO [auth-ms,4c3dc0bb5bb6537c,4c3dc0bb5bb6537c] 1 --- [grpc-default-executor-2] o.h.e.j.b.internal.AbstractBatchImpl     : HHH000010: On release of batch it still contained JDBC statements
+2023-06-18 11:30:33.071 ERROR [auth-ms,,] 1 --- [grpc-default-executor-2] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@39961e12
+
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [user.UK_sb8bbouer5wak8vyiiy4pf2bx]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276) ~[spring-orm-5.3.18.jar:5.3.18]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.18.jar:5.3.18]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566) ~[spring-orm-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.commit(TracePlatformTransactionManager.java:121) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy175.commit(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.6.3.jar:2.6.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy157.save(Unknown Source) ~[na:na]
+	at com.vima.auth.service.UserService.registerUser(UserService.java:30) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.auth.grpc_service.grpcUserDetailsService.register(grpcUserDetailsService.java:63) ~[classes/:0.0.1-SNAPSHOT]
+	at communication.userDetailsServiceGrpc$MethodHandlers.invoke(userDetailsServiceGrpc.java:622) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3375) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at java.base/java.util.LinkedHashMap.forEach(Unknown Source) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3290) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2425) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.18.jar:5.3.18]
+	... 39 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'stanisica@gmail.com' for key 'user.UK_sb8bbouer5wak8vyiiy4pf2bx'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.6.7.Final.jar:5.6.7.Final]
+	... 60 common frames omitted
+
+2023-06-18 11:33:27.622  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 11:33:27.629  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 11:33:27.652  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:33:27.657  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-18 11:33:27.669  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 11:35:39.926  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 47cef069f813 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 11:35:39.932  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 11:35:43.369  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 11:35:43.579  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 154 ms. Found 2 JPA repository interfaces.
+2023-06-18 11:35:44.365  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4a889e7f-2d96-3f2a-903e-c4db0e910de1
+2023-06-18 11:35:46.594  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-18 11:35:46.674  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 11:35:46.693  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 11:35:47.144  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 11:35:47.154  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7115 ms
+2023-06-18 11:35:50.434  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 11:35:50.524  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 11:35:50.751  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 11:35:50.877  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 11:35:51.318  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 11:35:51.339  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-18 11:35:52.828  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 11:35:52.840  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:35:53.595  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-18 11:35:54.692  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 11:35:54.796  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-18 11:35:54.926  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingService, bean: ratingGrpcService, class: com.vima.auth.grpc_service.RatingGrpcService
+2023-06-18 11:35:54.931  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpc_service.grpcUserDetailsService
+2023-06-18 11:35:55.068  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-18 11:35:55.099  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 16.29 seconds (JVM running for 17.37)
+2023-06-18 11:36:04.792  INFO [auth-ms,e96265107f6bfb5c,e96265107f6bfb5c] 1 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 11:36:04.793  INFO [auth-ms,e96265107f6bfb5c,e96265107f6bfb5c] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 11:36:04.795  INFO [auth-ms,e96265107f6bfb5c,e96265107f6bfb5c] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 11:44:16.841  INFO [auth-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 11:44:16.857  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 11:44:17.000  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:44:17.057  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-18 11:44:17.190  INFO [auth-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 11:46:33.521  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Starting AuthApplication v0.0.1-SNAPSHOT using Java 20.0.1 on a9d31644a618 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 11:46:33.526  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 11:46:35.723  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 11:46:35.840  INFO [auth-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
+2023-06-18 11:46:36.670  INFO [auth-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4a889e7f-2d96-3f2a-903e-c4db0e910de1
+2023-06-18 11:46:38.308  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-06-18 11:46:38.330  INFO [auth-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 11:46:38.332  INFO [auth-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 11:46:38.542  INFO [auth-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 11:46:38.543  INFO [auth-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4808 ms
+2023-06-18 11:46:40.750  INFO [auth-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 11:46:40.887  INFO [auth-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 11:46:41.247  INFO [auth-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 11:46:41.445  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 11:46:42.061  INFO [auth-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 11:46:42.082  INFO [auth-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-18 11:46:44.079  INFO [auth-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 11:46:44.153  INFO [auth-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:46:45.289  WARN [auth-ms,,] 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-18 11:46:47.131  INFO [auth-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 11:46:47.259  INFO [auth-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-06-18 11:46:47.467  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingService, bean: ratingGrpcService, class: com.vima.auth.grpc_service.RatingGrpcService
+2023-06-18 11:46:47.493  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: communication.userDetailsService, bean: grpcUserDetailsService, class: com.vima.auth.grpc_service.grpcUserDetailsService
+2023-06-18 11:46:47.746  INFO [auth-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9092
+2023-06-18 11:46:47.792  INFO [auth-ms,,] 1 --- [main] com.vima.auth.AuthApplication            : Started AuthApplication in 15.132 seconds (JVM running for 15.716)
+2023-06-18 11:46:56.248  INFO [auth-ms,cb43ccd69900784b,cb43ccd69900784b] 1 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 11:46:56.249  INFO [auth-ms,cb43ccd69900784b,cb43ccd69900784b] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 11:46:56.251  INFO [auth-ms,cb43ccd69900784b,cb43ccd69900784b] 1 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

@@ -387,3 +387,158 @@
 2023-06-18 01:20:41.193  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-06-18 01:20:41.196  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-06-18 01:20:41.212  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 10:52:44.732  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Starting AccommodationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on ae66af31e455 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 10:52:44.739  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 10:52:47.105  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 10:52:47.239  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 5 JPA repository interfaces.
+2023-06-18 10:52:47.975  INFO [accommodation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c1e9ef0-e1c1-3ab2-b5f5-8fb4a5ea04f1
+2023-06-18 10:52:49.445  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2023-06-18 10:52:49.487  INFO [accommodation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 10:52:49.489  INFO [accommodation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 10:52:49.605  INFO [accommodation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 10:52:49.605  INFO [accommodation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4760 ms
+2023-06-18 10:52:51.321  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 10:52:51.442  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 10:52:51.745  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 10:52:51.884  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 10:52:52.357  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 10:52:52.417  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-06-18 10:52:53.959  INFO [accommodation-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 10:52:53.968  INFO [accommodation-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 10:52:56.541  INFO [accommodation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 10:52:56.605  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2023-06-18 10:52:56.686  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.AccommodationService, bean: accommodationGrpcService, class: com.vima.accommodation.grpc_service.AccommodationGrpcService
+2023-06-18 10:52:56.689  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingAccommodationService, bean: ratingAccommodationGrpcService, class: com.vima.accommodation.grpc_service.RatingAccommodationGrpcService
+2023-06-18 10:52:56.744  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9093
+2023-06-18 10:52:56.764  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Started AccommodationApplication in 12.669 seconds (JVM running for 13.701)
+2023-06-18 10:52:58.590  INFO [accommodation-ms,e5565765de60e74f,e5565765de60e74f] 1 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 10:52:58.592  INFO [accommodation-ms,e5565765de60e74f,e5565765de60e74f] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 10:52:58.594  INFO [accommodation-ms,e5565765de60e74f,e5565765de60e74f] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 11:08:51.775  INFO [accommodation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 11:08:51.853  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 11:08:51.905  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:08:51.918  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-18 11:08:51.947  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 11:10:09.983  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Starting AccommodationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 9bf557487e63 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 11:10:09.986  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 11:10:11.283  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 11:10:11.360  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+2023-06-18 11:10:11.703  INFO [accommodation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c1e9ef0-e1c1-3ab2-b5f5-8fb4a5ea04f1
+2023-06-18 11:10:12.651  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2023-06-18 11:10:12.666  INFO [accommodation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 11:10:12.668  INFO [accommodation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 11:10:12.790  INFO [accommodation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 11:10:12.791  INFO [accommodation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2737 ms
+2023-06-18 11:10:14.038  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 11:10:14.122  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 11:10:14.354  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 11:10:14.511  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 11:10:15.040  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 11:10:15.071  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-06-18 11:10:16.696  INFO [accommodation-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 11:10:16.706  INFO [accommodation-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:10:18.514  INFO [accommodation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 11:10:18.575  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2023-06-18 11:10:18.661  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.AccommodationService, bean: accommodationGrpcService, class: com.vima.accommodation.grpc_service.AccommodationGrpcService
+2023-06-18 11:10:18.666  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingAccommodationService, bean: ratingAccommodationGrpcService, class: com.vima.accommodation.grpc_service.RatingAccommodationGrpcService
+2023-06-18 11:10:18.753  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9093
+2023-06-18 11:10:18.783  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Started AccommodationApplication in 9.217 seconds (JVM running for 9.718)
+2023-06-18 11:10:25.490  INFO [accommodation-ms,9ec2abcb92c09789,9ec2abcb92c09789] 1 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 11:10:25.491  INFO [accommodation-ms,9ec2abcb92c09789,9ec2abcb92c09789] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 11:10:25.495  INFO [accommodation-ms,9ec2abcb92c09789,9ec2abcb92c09789] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 11:16:02.083  INFO [accommodation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 11:16:02.098  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 11:16:02.122  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:16:02.125  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-18 11:16:02.137  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 11:21:23.176  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Starting AccommodationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 483b687dca47 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 11:21:23.181  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 11:21:25.217  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 11:21:25.369  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 5 JPA repository interfaces.
+2023-06-18 11:21:26.220  INFO [accommodation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c1e9ef0-e1c1-3ab2-b5f5-8fb4a5ea04f1
+2023-06-18 11:21:28.296  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2023-06-18 11:21:28.344  INFO [accommodation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 11:21:28.349  INFO [accommodation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 11:21:28.639  INFO [accommodation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 11:21:28.641  INFO [accommodation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5386 ms
+2023-06-18 11:21:30.903  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 11:21:30.986  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 11:21:31.225  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 11:21:31.576  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 11:21:32.186  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 11:21:32.210  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-06-18 11:21:34.070  INFO [accommodation-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 11:21:34.089  INFO [accommodation-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:21:36.684  INFO [accommodation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 11:21:36.776  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2023-06-18 11:21:37.014  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.AccommodationService, bean: accommodationGrpcService, class: com.vima.accommodation.grpc_service.AccommodationGrpcService
+2023-06-18 11:21:37.022  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingAccommodationService, bean: ratingAccommodationGrpcService, class: com.vima.accommodation.grpc_service.RatingAccommodationGrpcService
+2023-06-18 11:21:37.194  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9093
+2023-06-18 11:21:37.221  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Started AccommodationApplication in 14.651 seconds (JVM running for 15.335)
+2023-06-18 11:21:39.782  INFO [accommodation-ms,99db3716b4c3f297,99db3716b4c3f297] 1 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 11:21:39.783  INFO [accommodation-ms,99db3716b4c3f297,99db3716b4c3f297] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 11:21:39.786  INFO [accommodation-ms,99db3716b4c3f297,99db3716b4c3f297] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 11:33:27.620  INFO [accommodation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 11:33:27.640  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 11:33:27.667  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:33:27.672  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-18 11:33:27.693  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 11:35:41.968  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Starting AccommodationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 3937c3be024e with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 11:35:41.972  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 11:35:45.374  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 11:35:45.531  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 5 JPA repository interfaces.
+2023-06-18 11:35:46.990  INFO [accommodation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c1e9ef0-e1c1-3ab2-b5f5-8fb4a5ea04f1
+2023-06-18 11:35:50.184  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2023-06-18 11:35:50.271  INFO [accommodation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 11:35:50.302  INFO [accommodation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 11:35:50.523  INFO [accommodation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 11:35:50.525  INFO [accommodation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8369 ms
+2023-06-18 11:35:51.661  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 11:35:51.708  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 11:35:51.859  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 11:35:51.967  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 11:35:52.365  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 11:35:52.378  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-06-18 11:35:53.873  INFO [accommodation-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 11:35:53.883  INFO [accommodation-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:35:55.746  INFO [accommodation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 11:35:55.813  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2023-06-18 11:35:55.941  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.AccommodationService, bean: accommodationGrpcService, class: com.vima.accommodation.grpc_service.AccommodationGrpcService
+2023-06-18 11:35:55.946  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingAccommodationService, bean: ratingAccommodationGrpcService, class: com.vima.accommodation.grpc_service.RatingAccommodationGrpcService
+2023-06-18 11:35:56.053  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9093
+2023-06-18 11:35:56.141  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Started AccommodationApplication in 15.555 seconds (JVM running for 16.776)
+2023-06-18 11:36:05.624  INFO [accommodation-ms,917a4fb92d404921,917a4fb92d404921] 1 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 11:36:05.625  INFO [accommodation-ms,917a4fb92d404921,917a4fb92d404921] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 11:36:05.627  INFO [accommodation-ms,917a4fb92d404921,917a4fb92d404921] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-18 11:44:16.866  INFO [accommodation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 11:44:16.914  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 11:44:17.059  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:44:17.077  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-18 11:44:17.158  INFO [accommodation-ms,,] 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-18 11:46:32.725  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Starting AccommodationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on da00826dcd0e with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 11:46:32.730  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 11:46:35.065  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-18 11:46:35.184  INFO [accommodation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 5 JPA repository interfaces.
+2023-06-18 11:46:35.867  INFO [accommodation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c1e9ef0-e1c1-3ab2-b5f5-8fb4a5ea04f1
+2023-06-18 11:46:37.198  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2023-06-18 11:46:37.222  INFO [accommodation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 11:46:37.224  INFO [accommodation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 11:46:37.501  INFO [accommodation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 11:46:37.502  INFO [accommodation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4694 ms
+2023-06-18 11:46:39.694  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-18 11:46:39.881  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2023-06-18 11:46:40.311  INFO [accommodation-ms,,] 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-18 11:46:40.520  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-18 11:46:41.527  INFO [accommodation-ms,,] 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-18 11:46:41.573  INFO [accommodation-ms,,] 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-06-18 11:46:43.643  INFO [accommodation-ms,,] 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-18 11:46:43.657  INFO [accommodation-ms,,] 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-18 11:46:46.528  INFO [accommodation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 11:46:46.632  INFO [accommodation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2023-06-18 11:46:46.975  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.AccommodationService, bean: accommodationGrpcService, class: com.vima.accommodation.grpc_service.AccommodationGrpcService
+2023-06-18 11:46:46.982  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RatingAccommodationService, bean: ratingAccommodationGrpcService, class: com.vima.accommodation.grpc_service.RatingAccommodationGrpcService
+2023-06-18 11:46:47.224  INFO [accommodation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9093
+2023-06-18 11:46:47.273  INFO [accommodation-ms,,] 1 --- [main] c.v.a.AccommodationApplication           : Started AccommodationApplication in 15.16 seconds (JVM running for 15.753)
+2023-06-18 11:46:47.982  INFO [accommodation-ms,4da280736bb7c42a,4da280736bb7c42a] 1 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 11:46:47.983  INFO [accommodation-ms,4da280736bb7c42a,4da280736bb7c42a] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 11:46:47.989  INFO [accommodation-ms,4da280736bb7c42a,4da280736bb7c42a] 1 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
