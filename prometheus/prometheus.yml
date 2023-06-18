@@ -27,3 +27,9 @@ scrape_configs:
       - targets: ['reservation-ms:8084']
         labels:
           application: 'Reservation Service Application'
+  - job_name: 'recommendation-ms'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['recommendation-ms:8085']
+        labels:
+          application: 'Recommendation Service Application'

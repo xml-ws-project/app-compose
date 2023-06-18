@@ -1,0 +1,1038 @@
+2023-06-18 00:03:09.789  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 00:03:09.795  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 00:03:09.840  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 1717104778
+2023-06-18 00:03:09.844  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards localhost:7687
+2023-06-18 00:12:49.455  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 1dcc11a75c35 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 00:12:49.458  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 00:12:50.202  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 00:12:50.235  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 00:12:50.463  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 00:12:51.117  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 00:12:51.130  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 00:12:51.131  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 00:12:51.206  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 00:12:51.206  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1702 ms
+2023-06-18 00:12:52.132  WARN [recommendation-ms,,] 1 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'recommendationGrpcService' defined in file [/application/BOOT-INF/classes/com/vima/recommendation/grpc_service/RecommendationGrpcService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [/application/BOOT-INF/classes/com/vima/recommendation/service/UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.vima.recommendation.repository.UserRepository defined in @EnableNeo4jRepositories declared on Neo4jRepositoriesRegistrar.EnableNeo4jRepositoriesConfiguration: Cannot resolve reference to bean 'neo4jTemplate' while setting bean property 'neo4jOperations'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jClient' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'neo4jDriver' defined in class path resource [org/springframework/boot/autoconfigure/neo4j/Neo4jAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.neo4j.driver.Driver]: Factory method 'neo4jDriver' threw exception; nested exception is java.lang.IllegalArgumentException: Invalid address format `bolt://recommendation_db:7687`
+2023-06-18 00:12:53.134  WARN [recommendation-ms,,] 1 --- [main] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2023-06-18 00:12:53.139  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-18 00:12:53.161  INFO [recommendation-ms,,] 1 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-18 00:12:53.179 ERROR [recommendation-ms,,] 1 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'recommendationGrpcService' defined in file [/application/BOOT-INF/classes/com/vima/recommendation/grpc_service/RecommendationGrpcService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [/application/BOOT-INF/classes/com/vima/recommendation/service/UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.vima.recommendation.repository.UserRepository defined in @EnableNeo4jRepositories declared on Neo4jRepositoriesRegistrar.EnableNeo4jRepositoriesConfiguration: Cannot resolve reference to bean 'neo4jTemplate' while setting bean property 'neo4jOperations'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jClient' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'neo4jDriver' defined in class path resource [org/springframework/boot/autoconfigure/neo4j/Neo4jAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.neo4j.driver.Driver]: Factory method 'neo4jDriver' threw exception; nested exception is java.lang.IllegalArgumentException: Invalid address format `bolt://recommendation_db:7687`
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.6.jar:2.6.6]
+	at com.vima.recommendation.RecommendationApplication.main(RecommendationApplication.java:10) ~[classes/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[application/:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[application/:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[application/:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[application/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [/application/BOOT-INF/classes/com/vima/recommendation/service/UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.vima.recommendation.repository.UserRepository defined in @EnableNeo4jRepositories declared on Neo4jRepositoriesRegistrar.EnableNeo4jRepositoriesConfiguration: Cannot resolve reference to bean 'neo4jTemplate' while setting bean property 'neo4jOperations'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jClient' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'neo4jDriver' defined in class path resource [org/springframework/boot/autoconfigure/neo4j/Neo4jAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.neo4j.driver.Driver]: Factory method 'neo4jDriver' threw exception; nested exception is java.lang.IllegalArgumentException: Invalid address format `bolt://recommendation_db:7687`
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.vima.recommendation.repository.UserRepository defined in @EnableNeo4jRepositories declared on Neo4jRepositoriesRegistrar.EnableNeo4jRepositoriesConfiguration: Cannot resolve reference to bean 'neo4jTemplate' while setting bean property 'neo4jOperations'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jClient' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'neo4jDriver' defined in class path resource [org/springframework/boot/autoconfigure/neo4j/Neo4jAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.neo4j.driver.Driver]: Factory method 'neo4jDriver' threw exception; nested exception is java.lang.IllegalArgumentException: Invalid address format `bolt://recommendation_db:7687`
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 39 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jClient' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'neo4jDriver' defined in class path resource [org/springframework/boot/autoconfigure/neo4j/Neo4jAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.neo4j.driver.Driver]: Factory method 'neo4jDriver' threw exception; nested exception is java.lang.IllegalArgumentException: Invalid address format `bolt://recommendation_db:7687`
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 53 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'neo4jClient' defined in class path resource [org/springframework/boot/autoconfigure/data/neo4j/Neo4jDataAutoConfiguration.class]: Unsatisfied dependency expressed through method 'neo4jClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'neo4jDriver' defined in class path resource [org/springframework/boot/autoconfigure/neo4j/Neo4jAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.neo4j.driver.Driver]: Factory method 'neo4jDriver' threw exception; nested exception is java.lang.IllegalArgumentException: Invalid address format `bolt://recommendation_db:7687`
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 63 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'neo4jDriver' defined in class path resource [org/springframework/boot/autoconfigure/neo4j/Neo4jAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.neo4j.driver.Driver]: Factory method 'neo4jDriver' threw exception; nested exception is java.lang.IllegalArgumentException: Invalid address format `bolt://recommendation_db:7687`
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 77 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.neo4j.driver.Driver]: Factory method 'neo4jDriver' threw exception; nested exception is java.lang.IllegalArgumentException: Invalid address format `bolt://recommendation_db:7687`
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 91 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid address format `bolt://recommendation_db:7687`
+	at org.neo4j.driver.internal.BoltServerAddress.invalidAddressFormat(BoltServerAddress.java:198) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.BoltServerAddress.invalidAddressFormat(BoltServerAddress.java:193) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.BoltServerAddress.hostFrom(BoltServerAddress.java:135) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.BoltServerAddress.<init>(BoltServerAddress.java:49) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:92) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.DriverFactory.newInstance(DriverFactory.java:71) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.GraphDatabase.driver(GraphDatabase.java:142) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.GraphDatabase.driver(GraphDatabase.java:132) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.springframework.boot.autoconfigure.neo4j.Neo4jAutoConfiguration.neo4jDriver(Neo4jAutoConfiguration.java:71) ~[spring-boot-autoconfigure-2.6.6.jar:2.6.6]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 92 common frames omitted
+
+2023-06-18 00:15:59.574  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 4d0c99511a11 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 00:15:59.577  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 00:16:00.368  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 00:16:00.407  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 00:16:00.721  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 00:16:01.324  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 00:16:01.335  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 00:16:01.335  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 00:16:01.402  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 00:16:01.403  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1789 ms
+2023-06-18 00:16:02.374  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 1159911315 created for server address localhost:7687
+2023-06-18 00:16:03.589  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 00:16:03.646  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 00:16:03.756  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 00:16:03.855  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 00:16:03.883  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 4.607 seconds (JVM running for 4.961)
+2023-06-18 00:16:27.859 ERROR [recommendation-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@47db4f1d
+
+org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.; nested exception is org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:313) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.getTransaction(TracePlatformTransactionManager.java:72) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy153.getTransaction(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy131.save(Unknown Source) ~[na:na]
+	at com.vima.recommendation.service.UserService.create(UserService.java:23) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.recommendation.grpc_service.RecommendationGrpcService.createUserNode(RecommendationGrpcService.java:25) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.gateway.RecommendationServiceGrpc$MethodHandlers.invoke(RecommendationServiceGrpc.java:480) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:144) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:98) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:304) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	... 37 common frames omitted
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause: null
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.databaseUnavailableError(ChannelConnectedListener.java:76) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:70) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:37) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		... 1 common frames omitted
+Caused by: org.neo4j.driver.internal.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:7687
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:na]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 00:16:29.691  INFO [recommendation-ms,7cd6f50243e7e369,7cd6f50243e7e369] 1 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 00:16:29.692  INFO [recommendation-ms,7cd6f50243e7e369,7cd6f50243e7e369] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 00:16:29.694  INFO [recommendation-ms,7cd6f50243e7e369,7cd6f50243e7e369] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-18 00:17:36.736  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 00:17:36.744  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 00:17:36.764  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 1159911315
+2023-06-18 00:17:36.769  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards localhost:7687
+2023-06-18 00:25:23.792  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 769e56ff4672 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 00:25:23.794  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 00:25:24.401  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 00:25:24.433  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 00:25:24.708  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 00:25:25.204  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 00:25:25.211  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 00:25:25.212  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 00:25:25.268  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 00:25:25.269  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1439 ms
+2023-06-18 00:25:26.236  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 1692381981 created for server address 127.0.0.1:7687
+2023-06-18 00:25:27.185  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 00:25:27.252  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 00:25:27.363  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 00:25:27.496  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 00:25:27.520  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 4.019 seconds (JVM running for 4.33)
+2023-06-18 00:25:32.753 ERROR [recommendation-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@50e44e95
+
+org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Unable to connect to 127.0.0.1:7687, ensure the database is running and that there is a working network connection to it.; nested exception is org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to 127.0.0.1:7687, ensure the database is running and that there is a working network connection to it.
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:313) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.getTransaction(TracePlatformTransactionManager.java:72) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy153.getTransaction(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy131.save(Unknown Source) ~[na:na]
+	at com.vima.recommendation.service.UserService.create(UserService.java:23) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.recommendation.grpc_service.RecommendationGrpcService.createUserNode(RecommendationGrpcService.java:25) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.gateway.RecommendationServiceGrpc$MethodHandlers.invoke(RecommendationServiceGrpc.java:480) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to 127.0.0.1:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:144) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:98) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:304) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	... 37 common frames omitted
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause: null
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.databaseUnavailableError(ChannelConnectedListener.java:76) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:70) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:37) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		... 1 common frames omitted
+Caused by: org.neo4j.driver.internal.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /127.0.0.1:7687
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:na]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 00:25:33.160  INFO [recommendation-ms,a683f8b1fba6f62b,a683f8b1fba6f62b] 1 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 00:25:33.162  INFO [recommendation-ms,a683f8b1fba6f62b,a683f8b1fba6f62b] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 00:25:33.165  INFO [recommendation-ms,a683f8b1fba6f62b,a683f8b1fba6f62b] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 00:25:48.951  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 00:25:48.956  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 00:25:48.978  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 1692381981
+2023-06-18 00:25:48.980  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards 127.0.0.1:7687
+2023-06-18 00:28:18.084  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 4ebeb1376303 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 00:28:18.089  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 00:28:19.516  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 00:28:19.568  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 00:28:19.978  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 00:28:21.039  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 00:28:21.057  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 00:28:21.058  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 00:28:21.197  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 00:28:21.199  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3039 ms
+2023-06-18 00:28:22.464  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 1630986748 created for server address 0.0.0.0:7687
+2023-06-18 00:28:24.319  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 00:28:24.406  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 00:28:24.522  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 00:28:24.626  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 00:28:24.659  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 7.133 seconds (JVM running for 7.658)
+2023-06-18 00:28:41.105  INFO [recommendation-ms,73ea89b6c4ebba79,73ea89b6c4ebba79] 1 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 00:28:41.107  INFO [recommendation-ms,73ea89b6c4ebba79,73ea89b6c4ebba79] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 00:28:41.110  INFO [recommendation-ms,73ea89b6c4ebba79,73ea89b6c4ebba79] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 00:28:55.786 ERROR [recommendation-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@53b9a640
+
+org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Unable to connect to 0.0.0.0:7687, ensure the database is running and that there is a working network connection to it.; nested exception is org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to 0.0.0.0:7687, ensure the database is running and that there is a working network connection to it.
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:313) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.getTransaction(TracePlatformTransactionManager.java:72) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy153.getTransaction(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy131.save(Unknown Source) ~[na:na]
+	at com.vima.recommendation.service.UserService.create(UserService.java:23) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.recommendation.grpc_service.RecommendationGrpcService.createUserNode(RecommendationGrpcService.java:25) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.gateway.RecommendationServiceGrpc$MethodHandlers.invoke(RecommendationServiceGrpc.java:480) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to 0.0.0.0:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:144) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:98) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:304) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	... 37 common frames omitted
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause: null
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.databaseUnavailableError(ChannelConnectedListener.java:76) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:70) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:37) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		... 1 common frames omitted
+Caused by: org.neo4j.driver.internal.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /0.0.0.0:7687
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:na]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 00:29:15.802  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 00:29:15.807  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 00:29:15.849  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 1630986748
+2023-06-18 00:29:15.852  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards 0.0.0.0:7687
+2023-06-18 00:32:35.388  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 4ebeb1376303 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 00:32:35.390  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 00:32:36.082  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 00:32:36.112  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 00:32:36.320  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 00:32:36.853  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 00:32:36.881  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 00:32:36.882  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 00:32:36.954  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 00:32:36.954  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1525 ms
+2023-06-18 00:32:37.818  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 1692381981 created for server address 0.0.0.0:7687
+2023-06-18 00:32:38.854  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 00:32:38.895  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 00:32:38.962  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 00:32:39.035  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 00:32:39.055  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 3.974 seconds (JVM running for 4.331)
+2023-06-18 00:32:41.045  INFO [recommendation-ms,9ff3bd8c71166671,9ff3bd8c71166671] 1 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 00:32:41.046  INFO [recommendation-ms,9ff3bd8c71166671,9ff3bd8c71166671] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 00:32:41.047  INFO [recommendation-ms,9ff3bd8c71166671,9ff3bd8c71166671] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-18 00:35:51.340  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 00:35:51.346  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 00:35:51.364  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 1692381981
+2023-06-18 00:37:13.112  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 540d96fdb338 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 00:37:13.115  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 00:37:13.912  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 00:37:13.943  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 00:37:14.202  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 00:37:14.789  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 00:37:14.801  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 00:37:14.802  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 00:37:14.879  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 00:37:14.881  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1723 ms
+2023-06-18 00:37:15.740  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 853343978 created for server address 0.0.0.0:7687
+2023-06-18 00:37:16.978  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 00:37:17.045  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 00:37:17.148  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 00:37:17.260  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 00:37:17.285  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 4.549 seconds (JVM running for 4.882)
+2023-06-18 00:37:21.762  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 00:37:21.775  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 00:37:21.817  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 853343978
+2023-06-18 00:50:48.735  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on ae9a7b642851 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 00:50:48.737  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 00:50:49.574  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 00:50:49.620  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 00:50:50.017  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 00:50:50.807  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 00:50:50.824  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 00:50:50.825  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 00:50:50.920  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 00:50:50.923  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2145 ms
+2023-06-18 00:50:52.620  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 1189771504 created for server address localhost:7687
+2023-06-18 00:50:54.201  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 00:50:54.265  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 00:50:54.350  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 00:50:54.441  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 00:50:54.475  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 6.106 seconds (JVM running for 6.424)
+2023-06-18 00:51:08.768  INFO [recommendation-ms,1d4cb546806a4e03,1d4cb546806a4e03] 1 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 00:51:08.777  INFO [recommendation-ms,1d4cb546806a4e03,1d4cb546806a4e03] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 00:51:08.780  INFO [recommendation-ms,1d4cb546806a4e03,1d4cb546806a4e03] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 00:51:18.388 ERROR [recommendation-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@35a45e9e
+
+org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.; nested exception is org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:313) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.getTransaction(TracePlatformTransactionManager.java:72) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy153.getTransaction(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy131.save(Unknown Source) ~[na:na]
+	at com.vima.recommendation.service.UserService.create(UserService.java:23) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.recommendation.grpc_service.RecommendationGrpcService.createUserNode(RecommendationGrpcService.java:25) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.gateway.RecommendationServiceGrpc$MethodHandlers.invoke(RecommendationServiceGrpc.java:480) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:144) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:98) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:304) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	... 37 common frames omitted
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause: null
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.databaseUnavailableError(ChannelConnectedListener.java:76) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:70) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:37) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		... 1 common frames omitted
+Caused by: org.neo4j.driver.internal.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:7687
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:na]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 00:58:24.359  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 00:58:24.377  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 00:58:24.423  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 1189771504
+2023-06-18 00:58:24.426  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards localhost:7687
+2023-06-18 01:03:17.112  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 0da8ef9c80e1 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 01:03:17.115  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 01:03:18.380  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 01:03:18.432  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 01:03:18.774  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 01:03:19.563  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 01:03:19.577  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 01:03:19.579  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 01:03:19.723  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 01:03:19.725  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2569 ms
+2023-06-18 01:03:20.706  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 2020226167 created for server address localhost:7687
+2023-06-18 01:03:21.870  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 01:03:21.969  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 01:03:22.102  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 01:03:22.215  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 01:03:22.263  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 5.464 seconds (JVM running for 5.87)
+2023-06-18 01:03:56.192  INFO [recommendation-ms,ceb88d260c828cc6,ceb88d260c828cc6] 1 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 01:03:56.193  INFO [recommendation-ms,ceb88d260c828cc6,ceb88d260c828cc6] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 01:03:56.195  INFO [recommendation-ms,ceb88d260c828cc6,ceb88d260c828cc6] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-18 01:04:43.645 ERROR [recommendation-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@53b9a640
+
+org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.; nested exception is org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:313) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.getTransaction(TracePlatformTransactionManager.java:72) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy153.getTransaction(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy131.save(Unknown Source) ~[na:na]
+	at com.vima.recommendation.service.UserService.create(UserService.java:23) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.recommendation.grpc_service.RecommendationGrpcService.createUserNode(RecommendationGrpcService.java:25) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.gateway.RecommendationServiceGrpc$MethodHandlers.invoke(RecommendationServiceGrpc.java:480) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:144) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:98) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:304) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	... 37 common frames omitted
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause: null
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.databaseUnavailableError(ChannelConnectedListener.java:76) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:70) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:37) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		... 1 common frames omitted
+Caused by: org.neo4j.driver.internal.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:7687
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:na]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 01:05:27.345  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 01:05:27.373  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 01:05:27.402  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 2020226167
+2023-06-18 01:05:27.408  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards localhost:7687
+2023-06-18 01:06:39.720  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 6f11495a3943 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 01:06:39.723  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 01:06:40.501  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 01:06:40.543  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 01:06:40.798  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 01:06:41.384  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 01:06:41.405  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 01:06:41.406  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 01:06:41.498  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 01:06:41.499  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1726 ms
+2023-06-18 01:06:42.531  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 1485438020 created for server address localhost:7687
+2023-06-18 01:06:43.756  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 01:06:43.831  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 01:06:43.914  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 01:06:44.000  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 01:06:44.031  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 4.64 seconds (JVM running for 5.037)
+2023-06-18 01:07:06.093  INFO [recommendation-ms,e337cb4c67377066,e337cb4c67377066] 1 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 01:07:06.094  INFO [recommendation-ms,e337cb4c67377066,e337cb4c67377066] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 01:07:06.097  INFO [recommendation-ms,e337cb4c67377066,e337cb4c67377066] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 01:07:56.227 ERROR [recommendation-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@69766b0a
+
+org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.; nested exception is org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:313) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.getTransaction(TracePlatformTransactionManager.java:72) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy153.getTransaction(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy131.save(Unknown Source) ~[na:na]
+	at com.vima.recommendation.service.UserService.create(UserService.java:23) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.recommendation.grpc_service.RecommendationGrpcService.createUserNode(RecommendationGrpcService.java:25) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.gateway.RecommendationServiceGrpc$MethodHandlers.invoke(RecommendationServiceGrpc.java:480) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:144) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:98) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:304) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	... 37 common frames omitted
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause: null
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.databaseUnavailableError(ChannelConnectedListener.java:76) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:70) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:37) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		... 1 common frames omitted
+Caused by: org.neo4j.driver.internal.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:7687
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:na]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 01:08:32.065  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 01:08:32.069  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 01:08:32.092  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 1485438020
+2023-06-18 01:08:32.095  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards localhost:7687
+2023-06-18 01:10:06.813  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 5d0bda22a7cb with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 01:10:06.817  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 01:10:07.839  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 01:10:07.879  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 01:10:08.120  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 01:10:08.902  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 01:10:08.917  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 01:10:08.918  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 01:10:08.998  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 01:10:08.998  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2114 ms
+2023-06-18 01:10:10.238  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 853343978 created for server address localhost:7687
+2023-06-18 01:10:11.884  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 01:10:12.023  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 01:10:12.148  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 01:10:12.294  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 01:10:12.343  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 5.935 seconds (JVM running for 6.339)
+2023-06-18 01:10:27.479  INFO [recommendation-ms,a1ebe99ccab04248,a1ebe99ccab04248] 1 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 01:10:27.482  INFO [recommendation-ms,a1ebe99ccab04248,a1ebe99ccab04248] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 01:10:27.488  INFO [recommendation-ms,a1ebe99ccab04248,a1ebe99ccab04248] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-06-18 01:14:18.334 ERROR [recommendation-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@7c41b44
+
+org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.; nested exception is org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:313) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.getTransaction(TracePlatformTransactionManager.java:72) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy153.getTransaction(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy131.save(Unknown Source) ~[na:na]
+	at com.vima.recommendation.service.UserService.create(UserService.java:23) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.recommendation.grpc_service.RecommendationGrpcService.createUserNode(RecommendationGrpcService.java:25) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.gateway.RecommendationServiceGrpc$MethodHandlers.invoke(RecommendationServiceGrpc.java:480) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:144) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:98) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:304) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	... 37 common frames omitted
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause: null
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.databaseUnavailableError(ChannelConnectedListener.java:76) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:70) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:37) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		... 1 common frames omitted
+Caused by: org.neo4j.driver.internal.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:7687
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:na]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 01:15:29.839  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 01:15:29.847  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 01:15:29.867  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 853343978
+2023-06-18 01:15:29.869  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards localhost:7687
+2023-06-18 01:16:36.361  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Starting RecommendationApplication v0.0.1-SNAPSHOT using Java 20.0.1 on 6183f7525604 with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-06-18 01:16:36.363  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-18 01:16:37.173  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2023-06-18 01:16:37.207  INFO [recommendation-ms,,] 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 Neo4j repository interfaces.
+2023-06-18 01:16:37.443  INFO [recommendation-ms,,] 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=39821d1c-3173-3351-97b8-24756c6029e7
+2023-06-18 01:16:38.039  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-06-18 01:16:38.051  INFO [recommendation-ms,,] 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-18 01:16:38.052  INFO [recommendation-ms,,] 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-06-18 01:16:38.120  INFO [recommendation-ms,,] 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-18 01:16:38.121  INFO [recommendation-ms,,] 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1719 ms
+2023-06-18 01:16:39.025  INFO [recommendation-ms,,] 1 --- [main] org.neo4j.driver.internal.DriverFactory  : Direct driver instance 1207093026 created for server address localhost:7687
+2023-06-18 01:16:40.185  INFO [recommendation-ms,,] 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-18 01:16:40.231  INFO [recommendation-ms,,] 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-06-18 01:16:40.314  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: com.vima.gateway.RecommendationService, bean: recommendationGrpcService, class: com.vima.recommendation.grpc_service.RecommendationGrpcService
+2023-06-18 01:16:40.403  INFO [recommendation-ms,,] 1 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9095
+2023-06-18 01:16:40.423  INFO [recommendation-ms,,] 1 --- [main] c.v.r.RecommendationApplication          : Started RecommendationApplication in 4.389 seconds (JVM running for 4.775)
+2023-06-18 01:17:00.537  INFO [recommendation-ms,3245f69ac9abcf73,3245f69ac9abcf73] 1 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-18 01:17:00.540  INFO [recommendation-ms,3245f69ac9abcf73,3245f69ac9abcf73] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-18 01:17:00.548  INFO [recommendation-ms,3245f69ac9abcf73,3245f69ac9abcf73] 1 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-18 01:17:10.904 ERROR [recommendation-ms,,] 1 --- [grpc-default-executor-0] io.grpc.internal.SerializingExecutor     : Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed@46d13bb
+
+org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.; nested exception is org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:313) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.cloud.sleuth.instrument.tx.TracePlatformTransactionManager.getTransaction(TracePlatformTransactionManager.java:72) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.tx.AbstractTransactionManagerInstrumenter$TransactionManagerMethodInterceptor.invoke(AbstractTransactionManagerInstrumenter.java:142) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy153.getTransaction(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.18.jar:5.3.18]
+	at jdk.proxy2/jdk.proxy2.$Proxy131.save(Unknown Source) ~[na:na]
+	at com.vima.recommendation.service.UserService.create(UserService.java:23) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.recommendation.grpc_service.RecommendationGrpcService.createUserNode(RecommendationGrpcService.java:25) ~[classes/:0.0.1-SNAPSHOT]
+	at com.vima.gateway.RecommendationServiceGrpc$MethodHandlers.invoke(RecommendationServiceGrpc.java:480) ~[classes/:0.0.1-SNAPSHOT]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) ~[grpc-stub-1.40.1.jar:1.40.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:820) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.30.0.jar:1.30.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.30.0.jar:1.30.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:144) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:98) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:304) ~[spring-data-neo4j-6.2.3.jar:6.2.3]
+	... 37 common frames omitted
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause: null
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.databaseUnavailableError(ChannelConnectedListener.java:76) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:70) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:37) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+		... 1 common frames omitted
+Caused by: org.neo4j.driver.internal.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:7687
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:na]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[neo4j-java-driver-4.4.5.jar:4.4.5-27f38b532a360cf35485df12ced05e31409afcd3]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-06-18 01:19:34.507  INFO [recommendation-ms,,] 1 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-06-18 01:19:34.513  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC server shutdown.
+2023-06-18 01:19:34.533  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 1207093026
+2023-06-18 01:19:34.535  INFO [recommendation-ms,,] 1 --- [SpringApplicationShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards localhost:7687
