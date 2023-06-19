@@ -4,35 +4,93 @@ services:
     build: ../gateway
     image: gateway
     container_name: gateway
+    depends_on:
+      - "zipkin"
     ports:
       - "8081:8081"
-  
+      - "9091:9091"
+    volumes:
+      - app-logs:/logging
+
   auth-ms:
     build: ../auth-ms
     image: auth-ms
     container_name: auth-ms
     depends_on:
-      - "auth_db"
+      auth_db:
+        condition: service_healthy
     ports:
       - "8082:8082"
+      - "9092:9092"
+    volumes:
+      - app-logs:/logging
+    restart: on-failure:5
+    # command: sh -c "sleep 10 && java -Djarmode=layertools -jar app.jar"
 
   accommodation-ms:
     build: ../accommodation-ms
     image: accommodation-ms
     container_name: accommodation-ms
     depends_on:
-      - "accommodation_db"
+      accommodation_db:
+        condition: service_healthy
     ports:
       - "8083:8083"
-  
+      - "9093:9093"
+    volumes:
+      - app-logs:/logging
+    restart: on-failure:5
+    # command: sh -c "sleep 10 && java -Djarmode=layertools -jar app.jar"
+
   reservation-ms:
     build: ../reservation-ms
     image: reservation-ms
     container_name: reservation-ms
-    depends_on:
-      - "reservation_db"
     ports:
       - "8084:8084"
+      - "9094:9094"
+    volumes:
+      - app-logs:/logging
+    depends_on:
+      - "gateway"
+      - "zipkin"
+
+  recommendation-ms:
+    build: ../recommendation-ms
+    image: recommendation-ms
+    container_name: recommendation-ms
+    ports:
+      - "8085:8085"
+      - "9095:9095"
+    # environment:
+    #   - ORG_NEO4J_DRIVER_URI=bolt://localhost
+    volumes:
+      - app-logs:/logging
+    depends_on:
+      neo4j:
+        condition: service_healthy
+
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    # Environment settings are defined here https://github.com/openzipkin/zipkin/blob/master/zipkin-server/README.md#environment-variables
+    # environment:
+    #   - STORAGE_TYPE=mysql
+    #   # Point the zipkin at the storage backend
+    #   - MYSQL_HOST=zipkin
+    # Uncomment to enable scribe
+    # - SCRIBE_ENABLED=true
+    # Uncomment to enable self-tracing
+    # - SELF_TRACING_ENABLED=true
+    # Uncomment to enable debug logging
+    # - JAVA_OPTS=-Dlogging.level.zipkin2=DEBUG
+    ports:
+      # Port used for the Zipkin UI and HTTP Api
+      - "9411:9411"
+      # Uncomment if you set SCRIBE_ENABLED=true
+      # - 9410:9410
+      # depends_on:
+      #   - zipkin_db
 
   auth_db:
     image: mysql:8-debian
@@ -42,7 +100,28 @@ services:
       - MYSQL_DATABASE=auth
     ports:
       - "3307:3306"
-  
+    healthcheck:
+      # test: ["CMD", "curl", "-f", "http://localhost:3307"]
+      test: "/usr/bin/mysql --user=root --password=root --execute 'SHOW DATABASES;'"
+      interval: 10s
+      timeout: 30s
+      retries: 5
+
+  neo4j:
+    container_name: neo4j
+    image: neo4j:4.4
+    restart: always
+    ports:
+      - "7687:7687"
+      - "7474:7474"
+    environment:
+      - NEO4J_AUTH=neo4j/123.Auth
+    healthcheck:
+      test: cypher-shell --username neo4j --password 123.Auth 'MATCH (n) RETURN COUNT(n);'
+      interval: 10s
+      timeout: 30s
+      retries: 5
+
   accommodation_db:
     image: mysql:8-debian
     restart: always
@@ -51,15 +130,69 @@ services:
       - MYSQL_DATABASE=accommodation
     ports:
       - "3309:3306"
-  
-  reservation_db:
-    image: "mongo:4.4.3"
-    restart: always
+    healthcheck:
+      # test: ["CMD", "curl", "-f", "http://localhost:3309"]
+      test: "/usr/bin/mysql --user=root --password=root --execute 'SHOW DATABASES;'"
+      interval: 10s
+      timeout: 30s
+      retries: 5
+    # zipkin_db:
+    #   image: openzipkin/zipkin-mysql
+    #   container_name: zipkin-mysql
+    # restart: always
+    # environment:
+    #   - MYSQL_ROOT_PASSWORD=root
+    #   - MYSQL_DATABASE=zipkin
+    # ports:
+    #   - "3310:3306"
 
-  recommendation_db:
-    image: neo4j:5.8.0
+  prometheus:
+    image: prom/prometheus:v2.37.1
+    container_name: prometheus
+    restart: always
     ports:
-      - "7474:7474"
-      - "7687:7687"
-    restart: always
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - "gateway"
+      - "accommodation-ms"
+      - "auth-ms"
+      - "reservation-ms"
 
+  grafana:
+    image: grafana/grafana-oss:9.5.2
+    container_name: grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    links:
+      - prometheus:prometheus
+    volumes:
+      - ./grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=root
+      - GF_SECURITY_ADMIN_PASSWORD=root
+
+  promtail:
+    image: grafana/promtail:2.2.1
+    volumes:
+      - ./promtail/promtail-config.yaml:/etc/promtail/promtail-config.yaml
+      - app-logs:/var/log
+    command: -config.file=/etc/promtail/promtail-config.yaml
+
+  loki:
+    image: grafana/loki:2.2.1
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki/loki-config.yaml:/etc/loki/loki-config.yaml
+    command: -config.file=/etc/loki/loki-config.yaml
+
+volumes:
+  app-logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./app-logs
